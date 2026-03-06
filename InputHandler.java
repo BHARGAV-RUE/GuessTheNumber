@@ -1,32 +1,39 @@
+package com.guessgame;
+
+import java.util.*;
 
 public class InputHandler {
 
-    public static String getTemperatureHint(int secretNumber, int guess) {
-        int diff = Math.abs(secretNumber - guess);
+    private Scanner sc;
 
-        if (diff == 0) {
-            return "Perfect";
-        } else if (diff >= 80) {
-            return "Frezzing";
-        } else if (diff >= 50) {
-            return "Very Cold";
-        } else if (diff >= 30) {
-            return "Cold";
-        } else if (diff >= 20) {
-            return "Warm";
-        } else {
-            return "Hot";
+    public InputHandler() {
+        sc = new Scanner(System.in);
+    }
+    public int getIntegerInput() {
+        while (true) {
+            try {
+                int num = sc.nextInt();
+                sc.nextLine();
+                return num;
+            }
+            catch (InputMismatchException e) {
+                System.out.println("Invalid input: Enter valid Integer.");
+                sc.next();
+            
+            }
+        
         }
     }
 
-    public static String getDirectionHint(int secretNumber, int guess) {
+    public String getStringInput(){
+        return sc.nextLine();
+    }
 
-        if (guess < secretNumber) {
-            return "Try Higher!";
-        } else if (guess > secretNumber) {
-            return "Try Lower!";
-        } else {
-            return "You got it right!";
-        }
+    public boolean isWithinRange(int value, int min, int max){
+        return value >= min && value <= max;
+    }
+
+    public void closeScanner(){
+        sc.close();
     }
 }

@@ -1,3 +1,5 @@
+package com.guessgame;
+
 public class HintProvider {
     public static String getTemperatureHint(int secretNumber, int guess) {
         int diff = Math.abs(secretNumber - guess);

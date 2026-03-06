@@ -1,5 +1,6 @@
+package com.guessgame;
+
 import java.util.Random;
-import javax.print.event.PrintJobListener;
 public class GuessGame {
     private int secretNumber;
     private int maxRange;
@@ -8,7 +9,7 @@ public class GuessGame {
     private InputHandler inputHandler;
     private ScoreManager scoreManager;
 
-    public void GuessGame(){
+    public GuessGame(){
         inputHandler = new InputHandler();
         scoreManager = new ScoreManager();
     }
@@ -56,7 +57,7 @@ public class GuessGame {
         }
     }
 
-    private void generateSecrectNumber(){
+    private void generateSecretNumber(){
         Random rand = new Random();
         secretNumber = rand.nextInt(maxRange)+ 1;
     }
@@ -68,7 +69,7 @@ public class GuessGame {
             System.out.println("Your Guess: ");
             int guess = inputHandler.getIntegerInput();
 
-            if(guess == 0007){
+            if(guess == 9999){
                 System.out.println("Cheat Activated! Secret number: " + secretNumber);
                 continue;
             }
@@ -76,6 +77,11 @@ public class GuessGame {
             if(!inputHandler.isWithinRange(guess,1,maxRange)){
                 System.out.println("Enter number between 1 - " + maxRange);
                 continue;
+            }
+
+            if(guess == secretNumber){
+                handleWin();
+                break;
             }
 
             scoreManager.incrementAttempts();
@@ -94,8 +100,8 @@ public class GuessGame {
         System.out.println("Correct! You guessed it!");
         System.out.println("Attempts taken "+ attempts);
 
-        System.out.println("Rank: " + scoreManager.calculateRandk());
-        scoreManager.updateHighScore(attempts);
+        System.out.println("Rank: " + scoreManager.calculateRank());
+        scoreManager.updateHighScore();
     }
 
     private boolean askReplay() {
