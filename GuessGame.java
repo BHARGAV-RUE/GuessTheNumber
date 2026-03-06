@@ -93,5 +93,16 @@ public class GuessGame {
 
         System.out.println("Correct! You guessed it!");
         System.out.println("Attempts taken "+ attempts);
+
+        System.out.println("Rank: " + scoreManager.calculateRandk());
+        scoreManager.updateHighScore(attempts);
+    }
+
+    private boolean askReplay() {
+
+        System.out.print("\nDo you want to play again? (y/n): ");
+        String choice = inputHandler.getStringInput();
+
+        return choice.equalsIgnoreCase("y");
     }
 }

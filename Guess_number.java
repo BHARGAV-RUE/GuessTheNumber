@@ -46,7 +46,7 @@ public class Guess_number {
                 }
 
                 if(userGuess < 1 || userGuess > 100){
-                    System.out.println("Enter number within range to go out of bound");
+                    System.out.println("Enter number within range.");
                     continue;
                 }
                 
