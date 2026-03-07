@@ -7,7 +7,7 @@ public class HintProvider {
         if (diff == 0) {
             return "Perfect";
         } else if (diff >= 80) {
-            return "Frezzing";
+            return "Freezing";
         } else if (diff >= 50) {
             return "Very Cold";
         } else if (diff >= 30) {
