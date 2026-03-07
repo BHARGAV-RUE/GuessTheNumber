@@ -15,6 +15,7 @@ public class GuessGame {
     }
 
     public void start(){
+        System.out.println();
         System.out.println("Welcome to Guess the Number!");
         System.out.println("----------------------------");
 
@@ -79,12 +80,13 @@ public class GuessGame {
                 continue;
             }
 
+            scoreManager.incrementAttempts();
+
             if(guess == secretNumber){
                 handleWin();
                 break;
             }
 
-            scoreManager.incrementAttempts();
 
             String tempHint = HintProvider.getTemperatureHint(secretNumber, guess);
             System.out.println(tempHint);
