@@ -1,7 +1,7 @@
 # GuessTheNumber --Java Console Game
-    Guess The Number is a console-based Java game where the player attempts to guess a randomly generated number within a specified range. The program provides hints after each guess, indicating whether the guessed number is too high or too low, helping the player reach the correct answer.
+Guess The Number is a console-based Java game where the player attempts to guess a randomly generated number within a specified range. The program provides hints after each guess, indicating whether the guessed number is too high or too low, helping the player reach the correct answer.
 
-    The project is designed using object-oriented programming principles and modular architecture. It separates responsibilities across different classes such as game logic, input handling, and score management to improve maintainability and readability.
+The project is designed using object-oriented programming principles and modular architecture. It separates responsibilities across different classes such as game logic, input handling, and score management to improve maintainability and readability.
 
 # Features
 1. Random Number Generation
