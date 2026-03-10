@@ -74,3 +74,44 @@ If the user enters the predefined cheat code(**9999**) instead of a number, the 
 After completing a round, the user may be given the option to start another game. This allows continuous gameplay without restarting the program. The system resets the secret number and attempt count for the new session.
 
 # Screenshots
+<img src="img/ss1.PNG">
+<img src="img/ss2.PNG">
+<img src="img/ss3.PNG">
+
+# Project Structure
+GuessTheNumber/
+│
+├── README.md
+│
+├── img/
+│   └── (images used in the project)
+│
+└── src/
+    │
+    ├── highscore.txt
+    │
+    ├── bin/
+    │   └── com/
+    │       └── guessgame/
+    │           ├── Main.class
+    │           ├── GuessGame.class
+    │           ├── InputHandler.class
+    │           └── ScoreManager.class
+    │
+    └── com/
+        └── guessgame/
+            ├── Main.java
+            ├── GuessGame.java
+            ├── InputHandler.java
+            └── ScoreManager.java
+
+# License
+
+
+## Author
+**Kallepally Bhargav**
+
+- Information Technology student
+- Java Developer
+- GitHub: https://github.com/BHARGAV-RUE
+- Linkedin: https://www.linkedin.com/in/bhargav-kallepally-816504241/
