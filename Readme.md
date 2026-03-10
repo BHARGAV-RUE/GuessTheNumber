@@ -51,9 +51,11 @@ The project is built using multiple classes that represent different components 
     cd GuessTheNumber
 
 3. Compile and run java files
+```
     cd src
 javac -d bin com/guessgame/*.java
 java -cp bin com.guessgame.Main
+```
 
 
 
@@ -82,6 +84,7 @@ After completing a round, the user may be given the option to start another game
 ![Game Screenshot](img/ss3.PNG)
 
 # Project Structure
+```
 GuessTheNumber/
 │
 ├── README.md
@@ -107,6 +110,7 @@ GuessTheNumber/
             ├── GuessGame.java
             ├── InputHandler.java
             └── ScoreManager.java
+```
 
 # Commit Convention
 
