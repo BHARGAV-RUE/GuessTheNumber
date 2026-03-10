@@ -1,4 +1,7 @@
-# GuessTheNumber --Java Console Game
+# Guess The Number --Java Console Game
+
+A console-based number guessing game built with Java demonstrating Object-Oriented Programming and modular design.
+
 Guess The Number is a console-based Java game where the player attempts to guess a randomly generated number within a specified range. The program provides hints after each guess, indicating whether the guessed number is too high or too low, helping the player reach the correct answer.
 
 The project is designed using object-oriented programming principles and modular architecture. It separates responsibilities across different classes such as game logic, input handling, and score management to improve maintainability and readability.
@@ -47,11 +50,11 @@ The project is built using multiple classes that represent different components 
 2. Navigate to the project Folder
     cd GuessTheNumber
 
-3. Compile java files
-    javac com/guessgame/*.java
+3. Compile and run java files
+    cd src
+javac -d bin com/guessgame/*.java
+java -cp bin com.guessgame.Main
 
-4. Run the java files
-    java com.guessgame.Main
 
 
 # Usage
@@ -74,9 +77,9 @@ If the user enters the predefined cheat code(**9999**) instead of a number, the 
 After completing a round, the user may be given the option to start another game. This allows continuous gameplay without restarting the program. The system resets the secret number and attempt count for the new session.
 
 # Screenshots
-<img src="img/ss1.PNG">
-<img src="img/ss2.PNG">
-<img src="img/ss3.PNG">
+![Game Screenshot](img/ss1.PNG)
+![Game Screenshot](img/ss2.PNG)
+![Game Screenshot](img/ss3.PNG)
 
 # Project Structure
 GuessTheNumber/
@@ -105,8 +108,20 @@ GuessTheNumber/
             ├── InputHandler.java
             └── ScoreManager.java
 
-# License
+# Commit Convention
 
+This project follows a structured commit message format to maintain a clear and readable commit history.
+
+Types of commits used in this repository:
+
+- **feat** – Used when introducing a new feature.
+- **fix** – Used when fixing a bug or issue in the code.
+- **refactor** – Used when restructuring code without changing its functionality.
+- **docs** – Used for documentation updates such as README improvements.
+- **style** – Used for formatting changes like folder structure, indentation, or file organization.
+
+# License
+This project is licensed under the MIT License.
 
 ## Author
 **Kallepally Bhargav**
